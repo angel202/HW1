@@ -17,7 +17,7 @@ void renderPixel(int x, int y, int radius)
 
         image[x][y] = 1;
         image[y][x] = 1;
-        image[y][size - x] = 1;
+        image[y][size - x] = 1; // creating the second half of the circle based on requirements 
         image[x][size - y] = 1;
 
     }
@@ -25,7 +25,7 @@ void renderPixel(int x, int y, int radius)
         assert(x >= 0 && y >= 0 && x <= size && y <= size);
         image[x][y]= 1;
         image[y][x] = 1;
-        image[size - y][x] = 1;
+        image[size - y][x] = 1;    // creating the second half of the circle based on requirements 
         image[size - x][y] = 1;
 
     }
@@ -37,12 +37,12 @@ void renderPixel(int x, int y, int radius)
 //To make it work with what we needed
 void rasterizeArc(int radius)
 {
-    int x = 150;
+    int x = 150;    // changing the origin 
     int y = radius+x;
     int d = 1 - radius;
     int deltaE= 3;
     int deltaSE= -2 *radius+ 5;
-    renderPixel (x,y,radius);
+    renderPixel (x,y,radius);   // added radius to renderpixel so it knows which circle its drawing so what if statement to execute
     while (y > x) {
         if (d < 0) {
             d += deltaE;
