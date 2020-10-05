@@ -1,7 +1,9 @@
 # HW1
 
 Name: Angel González 
+
 PSID: 1577688 
+
 HW1 for COSC 4370 
 
 I used CLion as my IDE. I ran my code on ubuntu using ./a.out 300 
